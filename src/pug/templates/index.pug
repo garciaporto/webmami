@@ -1,0 +1,104 @@
+extends ../partials/layout.pug
+block content
+  section#nosotros
+    .about-section-block-bg
+      .gradient-bg
+        .container
+          .col-md-6.offset-md-6.col-sm-12
+            h3.text-uppercase.montse.mb-4 Acerca de nosotros
+            .section-heading-line-left
+            p.line-high.mt-3
+              | Somos una empresa de integración y consultoría en legislación extranjera, con especialidad en regulaciones internas, medioambientales, tributarias y aduanales. Así como también en gestión de proyectos, incluidos procura, cumplimiento de requisitos y acompañamiento del desarrollo de proyectos de ingeniería.
+
+  section#servicios.container
+    .row
+      .section-heading.text-center.item-center.my-5
+        span.section-h3.text-uppercase Descubre nuestros servicios
+        .section-heading-line
+        h3.section-h2 Haz que tu empresa crezca con nosotros
+    .row
+      .card-deck
+        .card
+          #study.square
+          .card-body
+            h5.card-title.montse.text-uppercase Estudio
+            p.card-text Estudio preliminar y entrega de informe sobre normativa legal interna que pueda incidir en el proyecto, especialmente en regulación medioambiental, incluido los requisitos de estudios de impacto, corporativa, tributaria con énfasis en materia aduanal.
+        .card
+          #collect.square
+          .card-body
+            h5.card-title.montse.text-uppercase Recopilación
+            p.card-text Recopilación de información necesaria para la presentación final del estudio, incluyendo el cumplimiento de requisitos regulatorios internos, así como permisos y estudios de impacto medioambiental del proyecto.
+        .card
+          #follow.square
+          .card-body
+            h5.card-title.montse.text-uppercase Seguimiento
+            p.card-text Seguimiento del progreso del proyecto. En caso de ser necesarios, servicios de defensa legal y corrección de los permisos y estudios realizados. Control de cumplimiento de todos los requisitos legales y asistencia tributaria y aduanal.        
+  .container-fluid.boost-section.my-5
+    .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.item-center
+      h2.my-3 Somos una empresa de integración y consultoría en legislación extranjera y gestión de proyectos.
+  
+  section#contacto
+    .container
+      .row
+        .col-md-7.col-sm-12.col-xs-12
+          form(name='contactForm' action='send_form_email.php' method='POST')
+            .form-row
+              .col.form-group
+                input.custom-form(type='text' name='Name' placeholder='Nombre')
+              .col.form-group
+                input.custom-form(type='email' name='email' placeholder='Correo Electrónico')
+            .form-group
+              input.custom-form(type='text' name='Subject' placeholder='Asunto')
+            .form-group
+              textarea.custom-form.fixed-height(name='Message' placeholder='Escribe tu mensaje')
+            input.mb-5(type='submit' value='Enviar')
+        .col-md-5.col-sm-12
+          .row
+            .col-2
+              i.fas.fa-phone.contact-ico
+            .col.mb-2
+              h5.montse.text-uppercase Llámanos
+              ul.list-unstyled.link-unstyled
+                li
+                  a(href='tel:+1 (869) 469 2829') +1 (869) 469 2829
+                li
+                  |Fax:
+                  a(href='tel:+1 (869) 469 6509') +1 (869) 469 6509
+          .row
+            .col-2.mt-2
+              i.fas.fa-envelope.contact-ico
+            .col.my-2
+              h5.montse.text-uppercase Escríbenos
+              ul.list-unstyled.link-unstyled
+                li
+                  a(href='mailto:contacto@greenisland.net') contacto@greenisland.net
+                li
+                  a(href='mailto:atencion@greenisland.net') atencion@greenisland.net
+          .row
+            .col-2.mt-2
+              i.fas.fa-globe-africa.contact-ico
+            .col.my-2
+              h5.montse.text-uppercase Dónde estamos
+              address 
+                |Fort Charles, Charlestown
+                br
+                |Nevis, St Kitts & Nevis, West Indies
+          .row
+            .col-2.mt-2
+              i.fa.fa-clock.contact-ico
+            .col.my-2
+              h5.montse.text-uppercase Horario de atención
+              |Lunes a Viernes 8:00 a 17:00
+              br
+              |GMT -5
+  #cookies-banner.container-fluid.zindex-tooltip.fixed-bottom.cookies-banner(style='display: none')
+    .container
+      .row
+        .col.text-center.pt-2
+          p.text-muted.credit
+            | By using our website you are consenting to our use of cookies in accordance with our 
+            a(href='/cookies') cookie policy
+            | .
+            button#cookiesok.ml-3(type='button') Aceptar
+            
+            
